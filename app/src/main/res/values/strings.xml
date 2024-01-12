@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Iuran_GSS_2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masuk">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="hint_name">Masukkan nama lengkap anda</string>
+    <string name="hint_address">Masukkan nomor rumah anda</string>
+    <string name="hint_bloc">Masukkan blok anda</string>
+    <string name="hint_handphone">Masukkan nomor handphone anda</string>
+    <string name="hint_email">Masukkan email anda</string>
+    <string name="hint_password">Masukkan password anda</string>
 </resources>
