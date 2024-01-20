@@ -18,7 +18,7 @@
         android:layout_marginEnd="32dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="30dp"
-        app:layout_constraintEnd_toEndOf="pareant"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -43,11 +43,11 @@
                 android:id="@+id/tv_selamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="@string/selamat_pagi"
                 android:textColor="@color/black"
-                android:layout_marginStart="8dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/iv_profile"
                 app:layout_constraintTop_toTopOf="@id/iv_profile"
@@ -66,8 +66,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/tv_selamat"
-                app:layout_constraintTop_toBottomOf="@+id/tv_selamat"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/tv_selamat" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -75,13 +74,13 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tv_iuran_keamanan"
+        android:id="@+id/card_iuran_keamanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toStartOf="@id/tv_iuran_sampah"
+        app:layout_constraintEnd_toStartOf="@id/card_iuran_sampah"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_name">
 
@@ -110,15 +109,15 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tv_iuran_sampah"
+        android:id="@+id/card_iuran_sampah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_iuran_keamanan"
+        app:layout_constraintBottom_toBottomOf="@id/card_iuran_keamanan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_iuran_keamanan"
-        app:layout_constraintTop_toTopOf="@id/tv_iuran_keamanan">
+        app:layout_constraintStart_toEndOf="@id/card_iuran_keamanan"
+        app:layout_constraintTop_toTopOf="@id/card_iuran_keamanan">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -138,14 +137,13 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf=""
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tv_uang_kas"
+        android:id="@+id/card_uang_kas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -153,7 +151,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toStartOf="@id/card_transaksi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_iuran_keamanan">
+        app:layout_constraintTop_toBottomOf="@id/card_iuran_keamanan">
 
         <TextView
             android:layout_width="@dimen/width_card"
@@ -177,10 +175,10 @@
         android:layout_height="wrap_content"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_uang_kas"
+        app:layout_constraintBottom_toBottomOf="@id/card_uang_kas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_uang_kas"
-        app:layout_constraintTop_toTopOf="@id/tv_uang_kas"
+        app:layout_constraintStart_toEndOf="@id/card_uang_kas"
+        app:layout_constraintTop_toTopOf="@id/card_uang_kas"
 
         >
 
@@ -193,6 +191,7 @@
                 android:layout_width="@dimen/width_card"
                 android:layout_height="@dimen/height_card"
                 android:background="@color/primary"
+                android:gravity="center"
                 android:paddingStart="16dp"
                 android:paddingTop="32dp"
                 android:paddingEnd="16dp"
@@ -202,7 +201,6 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -216,8 +214,8 @@
         android:layout_marginTop="32dp"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_uang_kas"
-        app:layout_constraintTop_toBottomOf="@id/tv_uang_kas"
+        app:layout_constraintStart_toStartOf="@id/card_uang_kas"
+        app:layout_constraintTop_toBottomOf="@id/card_uang_kas"
 
         >
 

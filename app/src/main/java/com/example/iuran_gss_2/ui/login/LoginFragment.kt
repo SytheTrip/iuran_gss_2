@@ -17,4 +17,15 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navigate()
+    }
+
+    private fun navigate() {
+        binding.btnLogin.setOnClickListener {
+            LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+        }
+    }
+
 }
