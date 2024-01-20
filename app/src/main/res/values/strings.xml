@@ -10,4 +10,22 @@
     <string name="hint_handphone">Masukkan nomor handphone anda</string>
     <string name="hint_email">Masukkan email anda</string>
     <string name="hint_password">Masukkan password anda</string>
+    <string name="iuran_keamanan">IURAN\nKEAMANAN</string>
+    <string name="iuran_sampah">IURAN\nSAMPAH</string>
+    <string name="dummy_name">Jocelyne Wonder</string>
+    <string name="uang_kas">UANG\nKAS</string>
+    <string name="riwayat_transaksi">RIWAYAT\nTRANSAKSI</string>
+    <string name="bantuan">BANTUAN</string>
+    <string name="selamat_pagi">Selamat Pagi 👋</string>
+    <string name="payment_number">Payment Number</string>
+    <string name="kirim_bukti">KIRIM BUKTI</string>
+    <string name="nominal">Nominal</string>
+    <string name="dummy_payment">IKXXXX</string>
+    <string name="dummy_nominal">IDR 175,000</string>
+    <string name="dummy_hint">Pembayaran akan dialihkan ke WhatsApp, sertakan bukti pembayaran berupa foto.</string>
+    <string name="profile">PROFILE</string>
+    <string name="admin">Admin</string>
+    <string name="memberi_informasi">MEMBERI\nINFORMASI</string>
+    <string name="aktivitas">AKTIVITAS</string>
+    <string name="verifikasi_pembayaran">VERIFIKASI\nPEMBAYARAN</string>
 </resources>

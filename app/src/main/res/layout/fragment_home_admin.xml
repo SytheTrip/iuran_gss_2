@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.admin.home.HomeAdminFragment">
 
 
     <androidx.cardview.widget.CardView
@@ -43,17 +43,14 @@
                 android:id="@+id/tv_selamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="@string/selamat_pagi"
                 android:textColor="@color/black"
-                android:layout_marginStart="8dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/iv_profile"
-                app:layout_constraintTop_toTopOf="@id/iv_profile"
-
-
-                />
+                app:layout_constraintTop_toTopOf="@id/iv_profile" />
 
             <TextView
                 android:id="@+id/tv_name"
@@ -61,13 +58,12 @@
                 android:layout_height="wrap_content"
                 android:elevation="3dp"
                 android:gravity="center"
-                android:text="@string/dummy_name"
+                android:text="@string/admin"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/tv_selamat"
-                app:layout_constraintTop_toBottomOf="@+id/tv_selamat"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/tv_selamat" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -75,13 +71,13 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tv_iuran_keamanan"
+        android:id="@+id/tv_memberi_informasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toStartOf="@id/tv_iuran_sampah"
+        app:layout_constraintEnd_toStartOf="@id/tv_aktivitas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_name">
 
@@ -98,7 +94,7 @@
                 android:paddingTop="32dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="32dp"
-                android:text="@string/iuran_keamanan"
+                android:text="@string/memberi_informasi"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -110,15 +106,15 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tv_iuran_sampah"
+        android:id="@+id/tv_aktivitas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_iuran_keamanan"
+        app:layout_constraintBottom_toBottomOf="@id/tv_memberi_informasi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_iuran_keamanan"
-        app:layout_constraintTop_toTopOf="@id/tv_iuran_keamanan">
+        app:layout_constraintStart_toEndOf="@id/tv_memberi_informasi"
+        app:layout_constraintTop_toTopOf="@id/tv_memberi_informasi">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -133,12 +129,12 @@
                 android:paddingTop="32dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="32dp"
-                android:text="@string/iuran_sampah"
+                android:text="@string/aktivitas"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf=""
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -151,9 +147,9 @@
         android:layout_marginTop="32dp"
         android:background="@color/primary"
         app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toStartOf="@id/card_transaksi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_iuran_keamanan">
+        app:layout_constraintEnd_toEndOf="@id/tv_memberi_informasi"
+        app:layout_constraintStart_toStartOf="@id/tv_memberi_informasi"
+        app:layout_constraintTop_toBottomOf="@id/tv_memberi_informasi">
 
         <TextView
             android:layout_width="@dimen/width_card"
@@ -164,86 +160,12 @@
             android:paddingTop="32dp"
             android:paddingEnd="16dp"
             android:paddingBottom="32dp"
-            android:text="@string/uang_kas"
+            android:text="@string/verifikasi_pembayaran"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_transaksi"
-        android:layout_width="@dimen/width_card"
-        android:layout_height="wrap_content"
-        android:background="@color/primary"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_uang_kas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_uang_kas"
-        app:layout_constraintTop_toTopOf="@id/tv_uang_kas"
-
-        >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_riwayat_transaksi"
-                android:layout_width="@dimen/width_card"
-                android:layout_height="@dimen/height_card"
-                android:background="@color/primary"
-                android:paddingStart="16dp"
-                android:paddingTop="32dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="32dp"
-                android:text="@string/riwayat_transaksi"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_bantuan"
-        android:layout_width="@dimen/width_card"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@color/primary"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_uang_kas"
-        app:layout_constraintTop_toBottomOf="@id/tv_uang_kas"
-
-        >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_bantuan"
-                android:layout_width="@dimen/width_card"
-                android:layout_height="@dimen/height_card"
-                android:background="@color/primary"
-                android:gravity="center"
-                android:paddingStart="16dp"
-                android:paddingTop="32dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="32dp"
-                android:text="@string/bantuan"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
